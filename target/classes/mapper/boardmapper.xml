@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+    <!-- 네이스페이스의 기준은 패키지의 기준이다. = DAO를 설정해주는게 좋다. -->
+<mapper namespace="woo.spring.siksin.review.dao">
+  
+ <select id="selectAll" resultType="SiksinReviewDTO">
+select reviewNum, ratingScore, reviewContent, restaurantName,
+restaurantArea, restaurantTag, reviewNickName, reviewPassword, to_char(writeday, 'YYYY-MM-DD')writeday
+from reviewboard order by reviewNum desc
+</select>
+
+<insert id="insert" parameterType="SiksinReviewDTO">
+insert into reviewboard (reviewNum, ratingScore, reviewContent, restaurantName, restaurantArea, restaurantTag, reviewNickName, reviewPassword, writeday) 
+values((select max(reviewNum+1)as reviewNum from reviewboard), #{ratingScore}, #{reviewContent}, #{restaurantName}, #{restaurantArea}, #{restaurantTag},#{reviewNickName}, #{reviewPassword},  to_date(sysdate, 'YYYY-MM-DD'))
+</insert> 
+
+<update id="update" parameterType="SiksinReviewDTO">
+update reviewboard set ratingScore = #{ratingScore}, reviewContent=#{reviewContent}, restaurantName=#{restaurantName},
+restaurantArea=#{restaurantArea}, restaurantTag = #{restaurantTag}
+where reviewNum=#{reviewNum} and reviewPassword = #{reviewPassword}
+</update>
+
+<delete id="delete" parameterType="siksinReviewDTO">
+delete from reviewboard where reviewNum=#{reviewNum} and reviewPassword = #{reviewPassword}
+</delete>
+
+<select id="selectDetail" parameterType="int" resultType="SiksinReviewDTO">
+select  reviewNum, ratingScore, reviewContent, restaurantName,
+restaurantArea, restaurantTag,  reviewNickName, reviewPassword, to_char(writeday, 'yyyy-mm-dd') writeday 
+from reviewboard
+where reviewNum = #{reviewNum}
+</select>
+
+
+<!-- 게시글 몇개인지 확인 -->
+<select id="reviewCount" resultType="Integer">
+select count(*) from reviewboard
+</select>
+
+
+<!-- 비밀번호조회 -->
+<select id="passwordcheck" parameterType="siksinReviewDTO" resultType="SiksinReviewDTO">
+select reviewPassword from reviewboard where reviewNum = #{reviewNum} and reviewPassword = #{reviewPassword}
+</select> 
+
+</mapper>

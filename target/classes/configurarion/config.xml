@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+  <configuration>
+	<typeAliases>
+ 		<typeAlias type="woo.spring.siksin.member.dto.SiksinMemberDTO"
+			alias="SiksinMemberDTO" />
+		<typeAlias type="woo.spring.siksin.review.dto.SiksinReviewDTO"
+			alias="SiksinReviewDTO" />
+	</typeAliases>
+</configuration>
+  
+  
+  
+  

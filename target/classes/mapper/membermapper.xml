@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 네이스페이스의 기준은 패키지의 기준이다. = DAO를 설정해주는게 좋다. -->
+<mapper namespace="woo.spring.siksin.member.dao">
+
+<select id="selectAll"  resultType="SiksinMemberDTO">
+select memberNum, memberName, nickName,  password , to_char(memberBirth, 'yyyy-mm-dd')memberBirth, 
+gender, phoneNum, memberArea , agree from siksin
+</select>
+
+<insert id="insert" parameterType="SiksinMemberDTO">
+insert into siksin (memberNum,  memberName, nickName, password, memberBirth, gender, phoneNum, memberArea, agree)
+values((select max(memberNum+1)as memberNum from siksin), #{memberName}, #{nickName}, #{password}, to_date(#{memberBirth}, 'yyyy-mm-dd'), #{gender}, #{phoneNum}, #{memberArea}, #{agree})
+</insert>
+
+<update id="update" parameterType="SiksinMemberDTO">
+update siksin set password = #{password} , nickName = #{nickName},  phoneNum = #{phoneNum} , memberArea = #{memberArea} , agree=#{agree}
+where  memberNum = #{memberNum}
+</update>
+
+<delete id="delete" parameterType="SiksinMemberDTO">
+delete from siksin where  memberNum = #{memberNum} and password = #{password}
+</delete>
+
+<select id="selectDetail" parameterType="int" resultType="SiksinMemberDTO">
+select memberNum, memberName, nickName, password , to_char(memberBirth, 'yyyy-mm-dd') memberBirth , 
+gender, phoneNum, memberArea from siksin
+where memberNum = #{memberNum}
+</select>
+
+<!--  회원 몇명인지 카운트  -->
+<select id="memberCount" resultType="int">
+select count(*) from siksin
+</select>
+
+<!-- 로그인 -->
+<select id="login" parameterType="SiksinMemberDTO" resultType="SiksinMemberDTO">
+select * from siksin
+where phoneNum = #{phoneNum} and password = #{password}
+</select>
+
+<!-- 비밀번호 찾기 -->
+<select id="searchPassword" parameterType="SiksinMemberDTO" resultType="SiksinMemberDTO">
+select * from siksin 
+where phoneNum = #{phoneNum} and memberName = #{memberName}
+</select>
+
+<!-- 해당회원탈퇴하면 해당되는 회원번호 관련된 게시글 삭제 -->
+<select id="boardDeleteAll" parameterType="SiksinMemberDTO" resultType="SiksinMemberDTO">
+DELETE FROM reviewboard
+WHERE reviewNickName = (
+    SELECT nickName
+    FROM siksin
+    WHERE memberNum = #{memberNum} AND password = #{password})
+</select>
+
+</mapper>
