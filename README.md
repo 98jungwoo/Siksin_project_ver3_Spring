@@ -1,7 +1,7 @@
 # Siksin_project_ver3_Spring
 리뷰게시판(CRUD),회원관리(CRUD), 로그인, 비밀번호 찾기 등 스프링을 이용하여 프로젝트진행
- <br><br>
-	
+ <br><br> 
+ 
 ## ★ 프로젝트 소개
 HTML, CSS, JAVASCRIPT, JAVA, OARCLE 등 언어들을 활용하여 Spring Framework 의 MVC 패턴 기법을 적용한 식신이라는 맛집 공유 프로그램을 웹사이트로 구현
 사용자 친화적인 UI 와 기본에 충실한 그룹웨어로 조직 구성원들이 의사 소통, 업무 전달, 정보 공유 및 의사 결정들의 업무 활동을 원활하게 수행하고 지원.
