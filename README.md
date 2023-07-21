@@ -4,27 +4,26 @@
  
 ## ★ 프로젝트 소개
 HTML, CSS, JAVASCRIPT, JAVA, OARCLE 등 언어들을 활용하여 Spring Framework 의 MVC 패턴 기법을 적용한 식신이라는 맛집 공유 프로그램을 웹사이트로 구현
-사용자 친화적인 UI 와 기본에 충실한 그룹웨어로 조직 구성원들이 의사 소통, 업무 전달, 정보 공유 및 의사 결정들의 업무 활동을 원활하게 수행하고 지원.
 <br><br>
 
 ### 프로젝트 진행 기간
 
->  2023.06.29 ~ 2023.07.12 <br>
+>  2023.06.26 ~ 2023.07.12 <br>
 
-![프로젝트 일정](https:/img/Siksin_project_ver3_Spring/프로젝트일정.png)
+![프로젝트일정](https://github.com/98jungwoo/Siksin_project_ver3_Spring/assets/126783518/e566d7d5-7c3b-4e84-a0af-c97a552ef86a)
 <br><br>
 
 ## ★ 개발환경
 
-![개발환경](https:/img/Siksin_project_ver3_Spring/개발환경.png)
+![개발환경](https://github.com/98jungwoo/Siksin_project_ver3_Spring/assets/126783518/1647505d-48c6-48ca-a9b8-52744ee6d180)
 <br> 
 
 - OS : Windows 10 <br>
-- FW : Spring Framework <br>
+- FW : Spring Framework 4.3.18 <br>
 - DB : Oracle 11 <br>
-- WAS : Apache Tomcat 9 <br>
-- Front-end : HTML / CSS / javascript / jQuery  <br>
-- Back-end : JDK 1.8 / JSP / Mybatis <br>
+- WAS : Apache Tomcat 9.0.76
+- Front-end : HTML / CSS / javascript / jQuery / Bootstrap  <br>
+- Back-end : JDK 1.8 / JSP / Maven 3.9.2 <br>
 - Developer Tools : STS 3.9.11 / eXERD / SqlDeveloper <br> 
 <br><br>
 
@@ -35,14 +34,15 @@ HTML, CSS, JAVASCRIPT, JAVA, OARCLE 등 언어들을 활용하여 Spring Framewo
 - HTML
 - CSS
 - javascript
-- jQuery 
+- jQuery
+- Bootstrap
 <br>
 
 **Back-end** 
-<br><br>
+<br>
 - JDK 1.8
 - JSP
-- Mybatis
+- Maven 3.9.2
 <br>
 
 ###  TOOL
@@ -69,9 +69,9 @@ HTML, CSS, JAVASCRIPT, JAVA, OARCLE 등 언어들을 활용하여 Spring Framewo
 - 비밀번호를 잊어버렸을 시 전화번호 입력을 통해서 비밀번호를 찾도록 구현
 <br>
 
-![로그인](https:/img/Siksin_project_ver3_Spring/로그인.png)
+![로그인](https://github.com/98jungwoo/Siksin_project_ver3_Spring/assets/126783518/3fbb03cd-3ec7-4c00-9290-2341b23cb2ba)
 
-![비밀번호찾기](https:/img/Siksin_project_ver3_Spring/비밀번호찾기.png)
+![비밀번호찾기](https://github.com/98jungwoo/Siksin_project_ver3_Spring/assets/126783518/6fb669a5-4266-4aa7-b5eb-578c8eb84476)
  <br><br>
 
 ### 리뷰게시판
@@ -82,15 +82,15 @@ HTML, CSS, JAVASCRIPT, JAVA, OARCLE 등 언어들을 활용하여 Spring Framewo
 - 리뷰 수정&삭제를 위해서는 리뷰작성시 입력한 비밀번호와 일치해야지 수정&삭제 가능
  <br>
  
-![리뷰전체조회](https:/img/Siksin_project_ver3_Spring/리뷰전체조회.png)
+![리뷰전체조회](https://github.com/98jungwoo/Siksin_project_ver3_Spring/assets/126783518/f03ae0fb-2ac5-4694-8739-a76a58313f8c)
 
-![리뷰상세조회](https:/img/Siksin_project_ver3_Spring/리뷰상세조회.png)
+![리뷰상세조회](https://github.com/98jungwoo/Siksin_project_ver3_Spring/assets/126783518/ea8ad959-9e0b-4239-b45a-4fff9d43b6e6)
 
-![리뷰작성](https:/img/Siksin_project_ver3_Spring/리뷰작성.png)
+![리뷰작성](https://github.com/98jungwoo/Siksin_project_ver3_Spring/assets/126783518/2ca6d369-96c8-4a85-b72a-5cf0af6d2b4d)
 
-![리뷰수정](https:/img/Siksin_project_ver3_Spring/리뷰수정.png)
+![리뷰수정](https://github.com/98jungwoo/Siksin_project_ver3_Spring/assets/126783518/703642e1-514b-49c5-bf0d-b7126b16598d)
 
-![리뷰삭제](https:/img/Siksin_project_ver3_Spring/리뷰삭제.png)
+![리뷰삭제](https://github.com/98jungwoo/Siksin_project_ver3_Spring/assets/126783518/50007a53-b9ed-473a-86c1-57c840865ea2)
 <br><br>
 
 ### 회원관리
@@ -101,18 +101,18 @@ HTML, CSS, JAVASCRIPT, JAVA, OARCLE 등 언어들을 활용하여 Spring Framewo
 - 회원탈퇴를 하면 자동로그아웃과 해당 이름으로 작성한 리뷰는 같이 삭제되도록 구현
 <br>
 
-![회원전체조회](https:/img/Siksin_project_ver3_Spring/회원전체조회.png)
+![회원전체조회](https://github.com/98jungwoo/Siksin_project_ver3_Spring/assets/126783518/9e557eff-3071-4b04-8981-eb14197a6c5d)
 
-![회원상세조회](https:/img/Siksin_project_ver3_Spring/회원상세조회.png)
+![회원상세조회](https://github.com/98jungwoo/Siksin_project_ver3_Spring/assets/126783518/58ac66c9-5eee-4f6b-bdb5-a8772da64946)
 
-![회원가입](https:/img/Siksin_project_ver3_Spring/회원가입.png)
+![회원가입](https://github.com/98jungwoo/Siksin_project_ver3_Spring/assets/126783518/f1b6f709-0aae-406e-8abf-3b253151478a)
 
-![회원정보수정](https:/img/Siksin_project_ver3_Spring/회원정보수정.png)
+![회원정보수정](https://github.com/98jungwoo/Siksin_project_ver3_Spring/assets/126783518/2bb2f7b0-58d6-40e8-b682-2dbd1b267fd7)
 
-![회원탈퇴](https:/img/Siksin_project_ver3_Spring/회원탈퇴.png)
+![회원탈퇴](https://github.com/98jungwoo/Siksin_project_ver3_Spring/assets/126783518/68aa53ea-52f8-41b6-8726-51b34e814d14)
 <br><br>
 
 
 ## ★ ERD
 
-![테이블명세서](https://img/Siksin_project_ver3_Spring/테이블명세서.png)
+![프로젝트일정](https://github.com/98jungwoo/Siksin_project_ver3_Spring/assets/126783518/76fa88db-0ca3-4349-881e-97f0b2bd1852)
